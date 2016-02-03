@@ -1,0 +1,26 @@
+<ion-view title="Settings">
+  <ion-content class="padding">
+    <p color=red>
+      Currently Not Working!
+    </p>
+    <div class="list">
+      <label class="item item-input">
+        <i class="icon ion-home placeholder-icon"></i>
+        <input type="text" ng-model="name" placeholder="City Name">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-arrow-move placeholder-icon"></i>
+        <input type="text" ng-model="latitude" placeholder="Latitude">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-arrow-move placeholder-icon"></i>
+        <input type="text" ng-model="longitude" placeholder="Longitude">
+      </label>
+      <button class="button button-outline button-block button-dark"
+        ng-click="goToHome('abc', 50, 50)">
+          Add City
+          <br>
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

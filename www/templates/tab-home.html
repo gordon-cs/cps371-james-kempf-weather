@@ -1,0 +1,106 @@
+<ion-view title="Home" cache-view="false">
+  <ion-content align="center" class="has-header">
+
+    <ul class="list">
+
+      <!-- City - Current -->
+      <h1 class="city-title">{{city}}</h1>
+      <div class="weather-info">
+
+        <div class="temperature">
+          <p>
+            {{roundTemp(current.currently.temperature)}}&deg;
+          </p>
+        </div>
+
+        <div class="weather-details">
+          <p>
+            {{current.currently.summary}}
+          </p>
+          <p>
+            Presipitation: {{current.currently.precipProbability}}%
+          </p>
+          <p>
+            Humidity: {{current.currently.humidity}}%
+          </p>
+          <p>
+            Wind Speed: {{current.currently.windSpeed}} mph
+          </p>
+        </div>
+      </div>
+
+      <!-- Hourly -->
+      <div class="item item-divider"
+        ng-click="toggleGroup('Hourly')"
+        ng-class="{active: isGroupShown('Hourly')}">
+        <h1>Hourly</h1>
+      </div>
+      <div class="item item-accordion hour-info"
+      ng-show="isGroupShown('Hourly')"
+      ng-repeat="hour in current.hourly.data | limitTo:24">
+
+        <div class="hour-time">
+          <p>
+            {{getHour(hour.time)}}
+          </p>
+        </div>
+
+        <div class="hour-temperature">
+          <p>{{roundTemp(hour.temperature)}}&deg;</p>
+        </div>
+
+        <div class="hour-summary">
+
+        </div>
+
+        <div class="hour-details">
+          <p>
+            {{hour.summary}}
+          </p>
+          <p>
+            Presipitation: {{hour.precipProbability}}%
+          </p>
+          <p>
+            Humidity: {{hour.humidity}}%
+          </p>
+          <p>
+            Wind Speed: {{hour.windSpeed}} mph
+          </p>
+        </div>
+      </div>
+
+      <!-- Daily -->
+      <div class="item item-divider"
+        ng-click="toggleGroup('Daily')"
+        ng-class="{active: isGroupShown('Daily')}">
+        <h1>Daily</h1>
+      </div>
+      <div class="item item-text-wrap item-accordion day-info"
+      ng-show="isGroupShown('Daily')"
+      ng-repeat="date in current.daily.data">
+        <div class="day-time">
+          <p>{{getDay(date.time)}}</p>
+        </div>
+        <div class="day-temperature">
+          <p>
+            {{date.temperatureMin}}&deg; - {{date.temperatureMax}}&deg;
+          </p>
+        </div>
+        <div class="day-details">
+          <p>
+            {{date.summary}}
+          </p>
+          <p>
+            Presipitation: {{date.precipProbability}}%
+          </p>
+          <p>
+            Humidity: {{date.humidity}}%
+          </p>
+          <p>
+            Wind Speed: {{date.windSpeed}} mph
+          </p>
+        </div>
+      </div>
+    </ul>
+  </ion-content>
+</ion-view>
