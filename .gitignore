@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+platforms/
+plugins/
+=======
+
+WeatherApp/
+>>>>>>> d1c9feae8605cdddf402a5b76b0ab93068e98979
