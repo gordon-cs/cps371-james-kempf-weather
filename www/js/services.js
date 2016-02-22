@@ -2,12 +2,12 @@
 
 var forecastioWeather = ['$q', '$resource', '$http', 'FORECASTIO_KEY',
     function($q, $resource, $http, FORECASTIO_KEY) {
-	var url = 'https://api.forecast.io/forecast/' + FORECASTIO_KEY + '/';
+	//var url = 'https://api.forecast.io/forecast/' + FORECASTIO_KEY + '/';
+	var serverUrl = 'http://server-project-1223.appspot.com/?';
 
 	return {
 	    getCurrentWeather: function(lat, lng) {
-		return $http.jsonp(url + lat + ',' + lng +
-				   '?callback=JSON_CALLBACK');
+		      return $http.jsonp(serverUrl + 'lat=' + lat + '&lng=' + lng);
 	    }
 	}
     }
