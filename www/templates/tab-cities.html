@@ -1,0 +1,18 @@
+<ion-view title="Location" cache-view="false">
+    <ion-content align="center" class="has-header padding">
+        <h1>Select city</h1>
+        <div align="left" ng-repeat="city in cities">
+            <button class="button button-outline button-block button-dark"
+                ng-click="changeCity({{city.id}})">
+                {{city.name}}
+            </button>
+        </div>
+        <button class="button button-outline button-block button-dark
+            button-icon icon ion-ios-plus-empty"
+            ng-click="showPopup()"
+        </button>
+        <div>
+            {{cityInput}}
+        </div>
+    </ion-content>
+</ion-view>

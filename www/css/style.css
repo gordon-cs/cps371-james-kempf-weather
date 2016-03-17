@@ -1,0 +1,66 @@
+* {
+  text-align: center;
+  font-family: helvetica;
+}
+
+/* accordian list idea from: https://forum.ionicframework.com/t/expandable-list-in-ionic/3297 */
+.list .item.item-accordion {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.05s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+.city-title {
+  font-size: 50px;
+  padding: 10px 0px 30px 0px;
+}
+.temperature p {
+  padding-bottom: 40px;
+  font-size: 80px;
+  color: black;
+  float: center;
+}
+.weather-details p {
+  font-size: 20px;
+  padding-bottom: 8px;
+  float: center;
+}
+.list .item {
+  fonts-size: 50px;
+}
+.hour-info p {
+  color: black;
+}
+.hour-time p {
+  font-size: 30px;
+  padding: 10px 0px 20px 0px;
+}
+.hour-temperature p {
+  font-size: 40px;
+  padding: 5px 0px 15px 0px;
+}
+.hour-details p {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.day-info p {
+  color: black;
+}
+.day-time p {
+  font-size: 30px;
+  padding: 10px 0px 15px 0px;
+}
+.day-temperature p {
+  font-size: 40px;
+  padding: 5px 0px 15px 0px;
+}
+.day-details p {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
